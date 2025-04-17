@@ -1,0 +1,231 @@
+body {
+    height: 150vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom, #FF9933 17%, #ffffff 50%, #008000);
+}
+header{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-top: 5vh;
+    margin-left: 13vw;
+    margin-right: 13vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 20, 0);
+    margin-bottom: 7vh;
+}
+
+header img {          
+    height: 100px;
+    width: 100px; 
+}
+
+header h1 {
+    color: rgb(0,0,128);
+    font-size: 45px;
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 6vh;
+    font-weight: bolder;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    scale: 1.1;
+}
+
+.form-section {
+    flex: 1 1 60%;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 15px 0 0 15px;
+}
+
+.image-section {
+    flex: 1 1 40%;
+    min-width: 300px;
+    background-image: url('https://w0.peakpx.com/wallpaper/357/708/HD-wallpaper-shahid-bhagat-singh-messy-painting-style-dom-fighter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 15px 15px 0;
+}
+
+.form-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.separator::before, .separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.icons img {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    width: 50%;
+    padding: 8px;
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.form-control {
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+}
+.form-control:focus {
+    border-width: 2px;
+    border-color: rgb(58, 150, 255);
+    box-shadow: 0.5px 0.5px 5px brown;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Smaller text and margins for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .form-section, .image-section {
+        min-width: 100%;
+        border-radius: 15px;
+    }
+    .image-section {
+        min-height: 250px;
+        margin-top: 20px;
+    }
+}
+/* Forgot Password */
+.forgot{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.forgot a:hover {
+    text-decoration: none;
+}
+
+/* Sign-in link */
+.signin-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.signin-link a, .forgot a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signin-link a:hover{
+    text-decoration: underline;
+}
+
+/* --------------------------- */
+
+/* Form Group */
+.form-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+/* Input Styling */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Label Styling */
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+}
+
+/* Move the label upward on focus or when the input has value */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #007bff;
+    background: #fff;
+    padding: 0 5px;
+}
