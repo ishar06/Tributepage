@@ -37,7 +37,7 @@ Or [download the ZIP](https://github.com/ishar06/Tributepage/archive/refs/heads/
 ### 2. Navigate to the Project Folder
 
 ```bash
-cd WORKSPACE
+cd Tributepage-main
 ```
 
 ---
