@@ -52,7 +52,7 @@ Simply double-click the `index.html` file
 ## 📁 Folder Structure
 
 ```
-WORKSPACE/
+Tributepage-main/
 ├── images/           # All image assets used on the site
 ├── videos/           # Optional: videos if used
 ├── index.html        # Main HTML file
