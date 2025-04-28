@@ -61,20 +61,20 @@
     <script>
         const signinForm = document.getElementById("formId");
         signinForm.addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent form submission
+            e.preventDefault(); 
     
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
     
-            // Retrieve data from localStorage
+            
             const users = JSON.parse(localStorage.getItem("signupData")) || [];
     
-            // Find a matching user
+            
             const user = users.find(u => u.email === email && u.password === password);
     
             if (user) {
                 alert(`Welcome, ${user.name}!`);
-                window.location.href = "index.html"; // Redirect on successful login
+                window.location.href = "index.html"; 
             } else {
                 alert("Invalid email or password.");
             }
